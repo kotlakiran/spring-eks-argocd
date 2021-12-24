@@ -1,0 +1,15 @@
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  labels:
+    app: kirantest
+  name: hpa
+spec:
+  # Minimum replicas, check the current CPU utilization and make sure the minimum replicas can sustain under current resources
+  minReplicas: 4
+  # Maximum replicas, please make sure the maximum replicas are higher than what you have in deployment.yaml
+  maxReplicas: 5
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: kirantest

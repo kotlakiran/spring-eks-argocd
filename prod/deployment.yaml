@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook-ui
+spec:
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: kirantest
+  template:
+    metadata:
+      labels:
+        app: kirantest
+    spec: 
+      containers:     
+      - image: public.ecr.aws/p2a6g7m7/kiran:latest
+        name: kirantest
+        resources:
+          limits:
+            cpu: "250m"
+          requests:
+            cpu: "250m"          
+        ports:
+        - containerPort: 8089
