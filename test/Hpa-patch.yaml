@@ -6,7 +6,7 @@ metadata:
   name: hpa
 spec:
   # Minimum replicas, check the current CPU utilization and make sure the minimum replicas can sustain under current resources
-  minReplicas: 3
+  minReplicas: 6
   # Maximum replicas, please make sure the maximum replicas are higher than what you have in deployment.yaml
   maxReplicas: 10
   scaleTargetRef:
