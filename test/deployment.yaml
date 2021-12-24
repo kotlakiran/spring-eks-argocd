@@ -13,7 +13,7 @@ spec:
         app: kirantest
     spec: 
       containers:     
-      - image: public.ecr.aws/p2a6g7m7/kiran:latest
+      - image: public.ecr.aws/p2a6g7m7/kiran:1.0.0.1
         name: kirantest
         resources:
           limits:
