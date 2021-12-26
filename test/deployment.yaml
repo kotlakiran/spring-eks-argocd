@@ -3,7 +3,12 @@ kind: Deployment
 metadata:
   name: kirantest
 spec:
-  revisionHistoryLimit: 3
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
   selector:
     matchLabels:
       app: kirantest
