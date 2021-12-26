@@ -5,9 +5,9 @@ apiVersion: networking.k8s.io/v1beta1
 metadata:
   annotations:
     kubernetes.io/ingress.class: nlb
-    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/scheme: internal
     alb.ingress.kubernetes.io/healthcheck-path: '/'
-    external-dns.alpha.kubernetes.io/hostname: productcatalog-internal.a.nike.com
+    external-dns.alpha.kubernetes.io/hostname: ocpp-arocd
   name: ingress
 spec:
   rules:
